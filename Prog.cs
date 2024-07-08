@@ -1,12 +1,14 @@
-// Online C# Editor for free
-// Write, Edit and Run your C# code using C# Online Compiler
+
 
 using System;
 
 public class EquationSolver
 {
+   
     public static void Main(string[] args)
     {
+         bool isRunning=true;
+        while(isRunning){
     Console.WriteLine("Enter your a,b,and c in the form of ax^2+bx+c=0");
     Console.WriteLine("What is your a");
     var a= Convert.ToDouble(Console.ReadLine());
@@ -42,6 +44,12 @@ var h = y +"i";
          case >0:
         Console.WriteLine($"Your 2 solutions are {r},{t}");
         break;
+    }
+    Console.WriteLine("Do you want to run again");
+    string isRunningResponse=Console.ReadLine();
+    if(isRunningResponse=="no"){
+        isRunning=false;
+    }
     }
     }
 }
